@@ -478,6 +478,11 @@ main {
   border-radius: 15px;
 }
 
+.avatar-box img {
+  border-radius: 15px;
+}
+  
+
 .info-content .name {
   color: var(--white-2);
   font-size: var(--fs-3);
