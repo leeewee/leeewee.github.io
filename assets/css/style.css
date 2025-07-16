@@ -875,31 +875,7 @@ main {
 }
 
 /* Responsive adjustments for theme toggle */
-@media (min-width: 580px) {
-  .theme-toggle {
-    top: 30px;
-    right: 30px;
-    width: 55px;
-    height: 55px;
-  }
-  
-  .theme-toggle ion-icon {
-    font-size: 22px;
-  }
-}
 
-@media (min-width: 768px) {
-  .theme-toggle {
-    top: 40px;
-    right: 40px;
-    width: 60px;
-    height: 60px;
-  }
-  
-  .theme-toggle ion-icon {
-    font-size: 24px;
-  }
-}
 
 @media (min-width: 1024px) {
   .theme-toggle {
@@ -911,6 +887,25 @@ main {
   
   .theme-toggle ion-icon {
     font-size: 26px;
+  }
+}
+
+/* Default: show theme toggle button */
+.theme-toggle {
+  display: flex;
+}
+
+/* On screens < 1250px, hide theme toggle button when .info_more-btn is visible (sidebar collapsed) */
+@media (max-width: 1249px) {
+  .theme-toggle {
+    display: none;
+  }
+  .sidebar.active ~ .theme-toggle {
+    display: flex;
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    z-index: 20;
   }
 }
 

@@ -178,7 +178,6 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 // theme toggle functionality
 const themeToggle = document.querySelector("[data-theme-toggle]");
-const themeIcon = themeToggle.querySelector("ion-icon");
 const html = document.documentElement;
 
 // Check for saved theme preference or default to dark theme
@@ -198,6 +197,8 @@ themeToggle.addEventListener("click", function () {
 
 // Function to update theme icon
 function updateThemeIcon(theme) {
+  const themeIcon = themeToggle.querySelector("ion-icon");
+  if (!themeIcon) return;
   if (theme === "light") {
     themeIcon.setAttribute("name", "sunny-outline");
   } else {
